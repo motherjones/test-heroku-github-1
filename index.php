@@ -1,13 +1,9 @@
 <?php
-//header("Access-Control-Allow-Origin: https://devblock---m-jk-s-l-h9w3-t-l-fp5--6ne2rr3.airtableblocks.com");
-header("Access-Control-Allow-Origin: https://block---m-jk-s-l-h9w3-t-l-fp5--v298nmq.airtableblocks.com");
-//header("Access-Control-Allow-Origin: http://util.motherjones.net");
-//header("Access-Control-Allow-Origin: https://devblock--c-nr54c3l2-r-ek-df--rhw50x6.airtableblocks.com");
-
-//https://devblock--c-nr54c3l2-r-ek-df--rhw50x6.airtableblocks.com
-//http://util.motherjones.net
-//https://devblock---m-jk-s-l-h9w3-t-l-fp5--6ne2rr3.airtableblocks.com
-
+if($_SERVER['HTTP_REFERER'],"airtableblocks.com") === true) {
+    $traceback = $_SERVER['HTTP_REFERER'];
+}
+//header("Access-Control-Allow-Origin:  $traceback");
+//header("Access-Control-Allow-Origin: https://block---m-jk-s-l-h9w3-t-l-fp5--v298nmq.airtableblocks.com");
 
 /* security flaw may exist here */
 $source = $_REQUEST['tweet_url'];

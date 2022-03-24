@@ -5,6 +5,8 @@ if($_SERVER['HTTP_REFERER'],"airtableblocks.com") === true) {
 //header("Access-Control-Allow-Origin:  $traceback");
 //header("Access-Control-Allow-Origin: https://block---m-jk-s-l-h9w3-t-l-fp5--v298nmq.airtableblocks.com");
 
+echo $traceback;
+
 /* security flaw may exist here */
 $source = $_REQUEST['tweet_url'];
 

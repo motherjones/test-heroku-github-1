@@ -1,5 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin:  http://util.motherjones.net");
+header("Access-Control-Allow-Origin: http://util.motherjones.net");
+
 if($_SERVER['HTTP_REFERER'],"airtableblocks.com") === true) {
     $traceback = $_SERVER['HTTP_REFERER'];
 }
@@ -26,9 +27,6 @@ $curl_code = "Authorization: Bearer " . $tweet;
 $get_tweet = "https://api.twitter.com/2/tweets?ids=" . $tweet_id . "&tweet.fields=public_metrics&expansions=attachments.media_keys&media.fields=public_metrics";
 
 $ch = curl_init($get_tweet);
-
-//$ch = curl_init('https://api.twitter.com/2/tweets/search/recent?query=from:motherjones');
-//$ch = curl_init('https://api.twitter.com/2/tweets/1392923520435331072');
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     $curl_code,

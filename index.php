@@ -1,11 +1,11 @@
 <?php
-header("Access-Control-Allow-Origin: http://util.motherjones.net");
-
 $traceback = $_SERVER['HTTP_REFERER'];
+header("Access-Control-Allow-Origin: $traceback");
 
-/*if(stripos($_SERVER['HTTP_REFERER'], "motherjones.net") !== false)) {
-    $traceback = $_SERVER['HTTP_REFERER'];
-}*/
+if(stripos($traceback, "motherjones.net") === false)) {
+    echo "Unacceptable domain";
+    die();
+}
 
 echo $traceback;
 ?>
